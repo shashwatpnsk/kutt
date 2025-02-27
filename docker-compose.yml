@@ -3,12 +3,14 @@ services:
     build:
       context: .
     volumes:
-       - db_data_sqlite:/var/lib/kutt
-       - custom:/kutt/custom
+      - db_data_sqlite:/var/lib/kutt
+      - custom:/kutt/custom
+    env_file:
+      - stack.env
     environment:
       DB_FILENAME: "/var/lib/kutt/data.sqlite"
     ports:
-      - 8124:3000
+      - "8124:3000"
 volumes:
   db_data_sqlite:
   custom:
