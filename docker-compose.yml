@@ -8,7 +8,7 @@ services:
     environment:
       DB_FILENAME: "/var/lib/kutt/data.sqlite"
     ports:
-      - 8124:8124
+      - 8124:3000
 volumes:
   db_data_sqlite:
   custom:
